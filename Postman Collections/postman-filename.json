@@ -1,0 +1,466 @@
+{
+  "info": {
+    "_postman_id": "5b5076d2-5cda-417b-9c9d-ff05c7b75dc7",
+    "name": "test-order-creator",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "configurable",
+      "_postman_id": "4b2be7cb-17fd-4d10-bcd0-61656c0b1ff7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"paymentTypes\": [\"CreditCard\"],\n    \"fraudStatus\": \"Accept\",\n    \"siteId\": 387,\n    \"guestCheckout\": true,\n    \"subOrders\": [\n        {\n            \"productType\": \"SmallBox\",\n            \"delivery\": \"Free\",\n            \"products\": [\n                {\n                    \"quantity\": 1,\n                    \"service\": \"\",\n                    \"carePlan\": \"\"\n                }\n            ]\n        }\n    ],\n    \"salesChannel\": 1,\n    \"mockSaleMessage\": false\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/configurable/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "chip-and-pin-payment",
+      "_postman_id": "948c75bf-35b1-49eb-8f0b-5b199fa0c144",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/chip-and-pin-payment/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "fmo-with-accessories",
+      "_postman_id": "ca480801-3c5b-4463-b356-cef61d512c7f",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/fmo-with-accessories/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "fmo-via-apigee",
+      "_postman_id": "1ee90e51-97aa-42f9-a836-795f576ba675",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/fmo-via-apigee/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "fmo-via-apigee-paid-by-card-only",
+      "_postman_id": "c60ff5df-9f52-4eab-80fc-bfba66d13db0",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/fmo-via-apigee-paid-by-card-only/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "fmo-via-apigee-paid-by-credit-only",
+      "_postman_id": "db7ebbdb-214e-47ce-9970-5bae71d6353d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/fmo-via-apigee-paid-by-credit-only/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "fmo_with_get_next_order_id",
+      "_postman_id": "363e3f69-9e2e-498c-a3cd-5f08346e901d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/fmo_with_get_next_order_id/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "mixed-park-and-recall",
+      "_postman_id": "6c55847f-47ba-41f2-8fa6-1ae11f7d29dd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/mixed-park-and-recall/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "sdd-with-uber-delivery",
+      "_postman_id": "4cef715b-f1f5-46a3-8cde-ecb63eb36aac",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/sdd-with-uber-delivery/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "simple-park-and-recall",
+      "_postman_id": "685185c5-e3a3-41f3-a2cd-6dc50f8e277f",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/simple-park-and-recall/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "simple-park-and-recall-with-insurance",
+      "_postman_id": "ea9a322b-6a6e-43f6-8295-5905fed04049",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://order-creator.sre.dsg-i.com/api/simple-park-and-recall-with-insurance/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "simple-pay-and-collect-store-stock",
+      "_postman_id": "091c3ea2-acd2-465e-9f80-f432bda2dffb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/simple-pay-and-collect-store-stock/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "simple-pay-and-collect-store-stock-care-plan",
+      "_postman_id": "cddcbc30-7786-44b3-b0c1-3f75604bc92d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/simple-pay-and-collect-store-stock-care-plan/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "simple-transaction-mode",
+      "_postman_id": "2522754e-3c26-4c26-9063-94db8903fadd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/simple-transaction-mode/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "simple-unshackled",
+      "_postman_id": "b5fca750-5eda-49a0-aa53-0b5a29cd5d62",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/simple-unshackled/{{env}}"
+      },
+      "response": []
+    },
+    {
+      "name": "stored-card-credentials",
+      "_postman_id": "8b985911-c85a-4ded-bfd1-6de52de7b769",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"siteId\": 387\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "http://test-order-creator.sre.dsg-i.com/api/stored-card-credentials/{{env}}"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ],
+        "id": "c423487a-e330-41ec-a324-99790700d1a9"
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ],
+        "id": "b10c3dbc-fffa-41ae-8cf9-c56f7a1f4e44"
+      }
+    }
+  ]
+}
